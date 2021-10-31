@@ -6811,7 +6811,8 @@ print {
 .hero.is-fullheight .hero-body,
 .hero.is-fullheight-with-navbar .hero-body {
     align-items: center;
-    display: flex
+    display: flex;
+    background-color: darkslategray;
 }
 
 .hero.is-halfheight .hero-body>.container,
