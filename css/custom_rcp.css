@@ -1,18 +1,20 @@
 .hero-body h1,
-h2,
-.title,
-.subtitle
+.hero-body h2,
+.hero-body .title,
+.hero-body .subtitle
 {
-    color: #587272 !important;
+    color: #fff !important;
 }
 
+h2,
+.title,
+.subtitle,
+p a {
+    color: #587272;
+}
 
 a {
     color: #97A7A7;
-}
-
-p a {
-    color: #587272;
 }
 
 body {
