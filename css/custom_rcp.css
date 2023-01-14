@@ -12,5 +12,14 @@ a {
 }
 
 p a {
-    color: #2f4f4f;
+    color: #587272;
+}
+
+body {
+    font-size: 1.2em;
+}
+
+.avatar {
+    border-radius: 30px;
+    box-shadow: none;
 }
