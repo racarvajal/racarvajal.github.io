@@ -25,3 +25,17 @@ body {
     border-radius: 30px;
     box-shadow: none;
 }
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+.table td, .table th{
+    padding: .50rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
