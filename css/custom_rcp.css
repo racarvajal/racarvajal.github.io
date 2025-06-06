@@ -1,50 +1,363 @@
-.hero-body h1,
-.hero-body h2,
-.hero-body .title,
-.hero-body .subtitle
-{
-    color: #fff !important;
-}
-
-h2,
-.title,
-.subtitle,
-p a {
-    color: #587272;
-}
-
-a {
-    color: #97A7A7;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-size: 1.2em;
+  background-color: #f4f5f7;
+  color: #1a1a1a;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  overflow-x: hidden;
 }
 
-.avatar {
-    border-radius: 30px;
-    box-shadow: none;
+.navbar {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
-.table {
-    width: 70%;
-    margin-bottom: 1rem;
-    background-color: transparent;
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.table td, .table th{
-    padding: .50rem;
-    vertical-align: top;
-    border-top: 1px solid #dee2e6;
+.nav-left {
+  display: flex;
+  align-items: center; /* ensures vertical alignment */
+  gap: 1.2rem; /* spacing between links and image */
+}
+
+.nav-left .site-name {
+  font-family: 'Viga', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center; /* ensures vertical alignment */
+  gap: 1.2rem; /* spacing between links and image */
+}
+
+.nav-right a {
+  margin-left: 2rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #1a1a1a;
+  border-bottom: 1px solid transparent;
+}
+
+.nav-right a:hover {
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.nav-profile {
+  width: 32px;   /* or 28–36px depending on your design */
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+  transition: transform 0.3s ease;
+}
+
+.nav-profile:hover {
+  transform: scale(1.05);
+}
+
+.hero {
+  padding: 6rem 2rem 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: #ffffff;
+  min-height: calc(90vh + 80px); /* adapts to screen height */
+  text-align: left;
+}
+
+.hero-text {
+  max-width: 960px;
+}
+
+.hero h1 {
+  font-family: 'Viga', sans-serif;
+  font-size: 7vw;
+  font-weight: 700;
+  color: #1c1c1c;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.4rem;
+  color: #4d4d4d;
+}
+
+main.content {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 6rem 2rem 4rem;
+}
+
+h2 {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+section {
+  /*margin-bottom: 2rem;*/
+  padding: 2rem;
+  /*border: 1px solid #e0e0e0;*/
+  border-radius: 8px;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  margin: 2rem 0;
+}
+
+a {
+  color: #1a4e58;
+  text-decoration: none;
+  border-bottom: 1px solid #1a4e58;
+  transition: color 0.2s ease, border-bottom 0.2s ease;
+}
+
+a:hover {
+  border-bottom: 2px solid #1a4e58;
+}
+
+footer {
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #888;
+  background-color: #fefefe;
+  border-top: 1px solid #eaeaea;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 10vw;
+  }
+
+  .hero {
+    padding: 4rem 1rem;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  main.content {
+    padding: 4rem 1rem;
+  }
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section-box {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+}
+
+.section-box section {
+  padding: 2rem;
+  /*border-bottom: 1px solid #e0e0e0;*/
+}
+
+.section-box section:last-child {
+  border-bottom: none;
+}
+
+/* Publications section */
+.publications {
+    padding: 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    padding-top: 1em;
+}
+
+/* Individual publication entry */
+.pub-entry, .bib-entry {
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 1rem;
+    padding: 1em;
+    background-color: #f9f9f9;
+    /*border-radius: 8px;*/
+}
+
+.pub-entry:last-child, .bib-entry:last-child {
+    border-bottom: none;
+}
+
+/* Publication title */
+.pub-title, .bib-title {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.3em;
+    line-height: 1.4;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+/* Authors */
+.pub-authors, .bib-authors {
+    font-size: 0.95rem;
+    color: #444;
+    font-variant: small-caps;
+    margin-bottom: 0.4rem;
+    font-weight: 500;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+/* Publication details */
+.pub-details, .bib-details {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 300;
+    line-height: 1.4;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+/* Links in details */
+.bib-details a, .pub-details a {
+    color: #1a4e58;
+    text-decoration: none;
+    border-bottom: 1px solid #1a4e58;
+    transition: color 0.2s ease, border-bottom 0.2s ease;
+}
+
+.bib-details a:hover, .pub-details a:hover {
+    color: #1a4e58;
+    border-bottom: 2px solid #1a4e58;
 }
 
 
-.t-center{
-    text-align: center !important;
+/* Bold text (highlighted author) */
+.pub-entry strong, .bib-entry strong {
+    font-weight: 700;
+    color: #2c3e50;
 }
 
+/* Responsive design */
+@media (max-width: 768px) {
+    .publications {
+        padding: 1rem;
+    }
+    
+    .pub-title, .bib-title {
+        font-size: 1rem;
+    }
+    
+    .pub-authors, .bib-authors {
+        font-size: 0.9rem;
+    }
+    
+    .pub-details, .bib-details {
+        font-size: 0.85rem;
+    }
+}
 
-.table thead th {
-    vertical-align: bottom;
-    border-bottom: 2px solid #dee2e6;
+/* --- Social Icons Styling --- */
+
+/* The new container for social icons, using Flexbox */
+#contact .social-icons-container {
+    display: flex; /* Makes it a flex container */
+    justify-content: space-evenly; /* Distributes items evenly with equal space around them */
+    align-items: center; /* Vertically aligns icons if they had different heights (they don't here, but good practice) */
+    width: 100%; /* Ensure it takes full width of its parent */
+    max-width: 700px; /* Limit to the main content width for better readability */
+    margin: 0 auto 1.5rem auto; /* Center the container itself, add bottom margin */
+    padding: 0; /* Remove any padding that might push icons in */
+}
+
+/* Styling for individual social icon links */
+#contact .social-icons-container a { /* Target using the new class */
+    font-size: 1.5em; /* Keep icon size */
+    /* Remove 'margin' here, as space-evenly handles distribution */
+    text-decoration: none; /* Remove underline */
+    color: #4d4d4d; /* Default icon color */
+    transition: color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    border-bottom: none; /* Ensure no border-bottom */
+    /* We don't need display: inline-block here because flex items are block-like by default */
+}
+
+/* Hover effect for social icons */
+#contact .social-icons-container a:hover { /* Target using the new class */
+    color: #1a4e58; /* Use your primary link color on hover */
+    text-decoration: none; /* Ensure no underline appears on hover */
+    transform: translateY(-3px); /* Subtle lift effect on hover */
+    border-bottom: none; /* Ensure no border-bottom */
+}
+
+/* Optional: Brand colors on hover for specific icons */
+/* (Keep these as they were, they'll still work with the new structure) */
+#contact a[aria-label="Twitter Profile"]:hover { color: #1DA1F2; }
+#contact a[aria-label="X Profile"]:hover { color: #101419; }
+#contact a[aria-label="Mastodon Profile"]:hover { color: #6364FF; }
+#contact a[aria-label="Threads Profile"]:hover { color: #000000; }
+#contact a[aria-label="Linkedin Profile"]:hover { color: #0A66C2; }
+#contact a[aria-label="Github Profile"]:hover { color: #6e5494; }
+#contact a[aria-label="Orcid Profile"]:hover { color: #A6CE39; }
+
+
+/* --- Email Link Styling (aligned to the left) --- */
+
+#contact .email-address { /* Target the new class for the email paragraph */
+    text-align: left; /* Align email text to the left */
+    margin-top: 1.5rem; /* Add some space above the email line if needed */
+    margin-bottom: 0; /* Remove default paragraph bottom margin if desired */
+}
+
+#contact .email-address a[href^="mailto:"] { /* Target the link within the new email paragraph */
+    /* Keep existing email link styles */
+    display: inline;
+    font-size: 1em;
+    margin: 0;
+    color: #1a4e58;
+    text-decoration: none;
+    border-bottom: 1px solid #1a4e58;
+    transition: border-bottom 0.2s ease, color 0.2s ease;
+}
+
+#contact .email-address a[href^="mailto:"]:hover { /* Target the link within the new email paragraph */
+    /* Keep existing email link hover styles */
+    color: #1a4e58;
+    border-bottom: 2px solid #1a4e58;
+    transform: none;
+}
+
+.profile-img {
+  display: block;
+  margin: 0 auto 1.5rem auto;
+  max-width: 180px;
+  width: 100%;
+  height: auto;
+  border-radius: 2rem; /* 50% for circular shape; 2rem for soft corners */
+  object-fit: cover;
 }
