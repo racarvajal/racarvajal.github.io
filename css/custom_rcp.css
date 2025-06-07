@@ -74,6 +74,8 @@ a:focus {
   justify-content: space-between;
   width: 100%; /* this ensures it fills the navbar */
   box-sizing: border-box; /* respects padding inside width */
+  flex-wrap: nowrap;
+  overflow: hidden;
 }
 
 .nav-left {
