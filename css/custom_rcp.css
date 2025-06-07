@@ -151,7 +151,7 @@ footer {
   border-top: 1px solid #eaeaea;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .hero h1 {
     font-size: 10vw;
   }
@@ -165,7 +165,43 @@ footer {
   main.content {
     padding: 4rem 1rem;
   }
+
+  /* Navbar tweaks */
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .nav-left {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 0.8rem;
+  }
+
+  .nav-left .site-name {
+    font-size: 1.2rem;
+  }
+
+  .nav-right {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    justify-content: flex-start;
+  }
+
+  .nav-right a {
+    margin-left: 0;
+    font-size: 0.95rem;
+  }
+
+  .nav-profile {
+    width: 28px;
+    height: 28px;
+  }
 }
+
 
 .container {
   max-width: 960px;
