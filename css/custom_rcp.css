@@ -124,12 +124,12 @@ a:focus {
 }
 
 .hero {
-  padding: 6rem 2rem 6rem;
+  /*padding: 6rem 2rem 6rem;*/
   display: flex;
   align-items: center;
   justify-content: flex-start;
   background: var(--color-card-bg);
-  min-height: calc(90vh + 80px); /* adapts to screen height */
+  min-height: calc(100vh - 80px); /* adapts to screen height */
   text-align: left;
 }
 
@@ -204,8 +204,8 @@ footer {
   }
 
   .hero {
-    padding: 4rem 1rem;
-    flex-direction: column;
+    /* padding: 4rem 1rem;*/
+    /*flex-direction: column;*/
     text-align: left;
   }
 
@@ -215,9 +215,9 @@ footer {
 
   /* Navbar tweaks */
   .nav-container {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
-    padding: 1rem;
+    padding: 0 1rem; /* add horizontal padding on small screens */
   }
 
   .nav-left {
