@@ -200,6 +200,22 @@ footer {
     width: 28px;
     height: 28px;
   }
+
+  .publications {
+    padding: 1rem;
+  }
+    
+  .pub-title, .bib-title {
+    font-size: 1rem;
+  }
+    
+  .pub-authors, .bib-authors {
+    font-size: 0.9rem;
+  }
+    
+  .pub-details, .bib-details {
+    font-size: 0.85rem;
+  }
 }
 
 
@@ -301,22 +317,8 @@ footer {
 }
 
 /* Responsive design */
-@media (max-width: 768px) {
-    .publications {
-        padding: 1rem;
-    }
+@media (max-width: 600px) {
     
-    .pub-title, .bib-title {
-        font-size: 1rem;
-    }
-    
-    .pub-authors, .bib-authors {
-        font-size: 0.9rem;
-    }
-    
-    .pub-details, .bib-details {
-        font-size: 0.85rem;
-    }
 }
 
 /* --- Social Icons Styling --- */
