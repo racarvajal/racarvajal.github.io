@@ -50,6 +50,11 @@ body {
   /* overflow-x: hidden; */
 }
 
+a:focus {
+  outline: 2px dashed var(--color-accent);
+  outline-offset: 2px;
+}
+
 .navbar {
   width: 100%;
   background-color: var(--color-card-bg);
@@ -132,7 +137,7 @@ body {
 
 .hero h1 {
   font-family: 'Viga', sans-serif;
-  font-size: 7vw;
+  font-size: clamp(2.5rem, 7vw, 5rem);
   font-weight: 700;
   color: var(--color-hero-title);
   line-height: 1.1;
