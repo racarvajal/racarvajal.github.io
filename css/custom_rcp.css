@@ -4,13 +4,20 @@
   padding: 0;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   background-color: #f4f5f7;
   color: #1a1a1a;
   font-family: 'Nunito Sans', sans-serif;
   font-size: 18px;
   line-height: 1.7;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 .navbar {
@@ -26,9 +33,12 @@ body {
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1rem; /* add horizontal padding on small screens */
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%; /* this ensures it fills the navbar */
+  box-sizing: border-box; /* respects padding inside width */
 }
 
 .nav-left {
@@ -192,7 +202,7 @@ footer {
   }
 
   .nav-right a {
-    margin-left: 0;
+    margin-left: 1rem;
     font-size: 0.95rem;
   }
 
