@@ -1,3 +1,33 @@
+:root {
+  --font-body: 'Nunito Sans', sans-serif;
+  --font-heading: 'Viga', sans-serif;
+  --font-accent: 'Unbounded', sans-serif;
+
+  --color-bg: #f4f5f7;
+  --color-fg: #1a1a1a;
+  --color-accent: #1a4e58;
+  --color-muted: #888;
+  --color-border: #e0e0e0;
+  --color-card-bg: #ffffff;
+  --color-pub-author: #444;
+  --color-pub-bg: #f9f9f9;
+  --color-pub-text: #2c3e50;
+  --color-pub-details: #666;
+  --color-nav-prof: #ccc;
+  --color-hero-title: #1c1c1c;
+  --color-hero-p: #4d4d4d;
+  --color-h2-text: #111;
+  --color-footer-bg: #fefefe;
+  --color-footer-border: #eaeaea;
+  --color-twitter: #1DA1F2;
+  --color-x-twitter: #101419;
+  --color-mastodon: #6364FF;
+  --color-threads: #000000;
+  --color-linkedin: #0A66C2;
+  --color-github: #6e5494;
+  --color-orcid:#A6CE39;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,8 +42,8 @@ html, body {
 }
 
 body {
-  background-color: #f4f5f7;
-  color: #1a1a1a;
+  background-color: var(--color-bg);
+  color: var(--color-fg);
   font-family: 'Nunito Sans', sans-serif;
   font-size: 18px;
   line-height: 1.7;
@@ -22,9 +52,9 @@ body {
 
 .navbar {
   width: 100%;
-  background-color: #ffffff;
+  background-color: var(--color-card-bg);
   padding: 1.5rem 2rem;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid var(--color-border);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -51,7 +81,7 @@ body {
   font-family: 'Viga', sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--color-fg);
   text-decoration: none;
 }
 
@@ -65,12 +95,12 @@ body {
   margin-left: 2rem;
   font-weight: 500;
   text-decoration: none;
-  color: #1a1a1a;
+  color: var(--color-fg);
   border-bottom: 1px solid transparent;
 }
 
 .nav-right a:hover {
-  border-bottom: 1px solid #1a1a1a;
+  border-bottom: 1px solid var(--color-fg);
 }
 
 .nav-profile {
@@ -78,7 +108,7 @@ body {
   height: 32px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #ccc;
+  border: 2px solid var(--color-nav-prof);
   transition: transform 0.3s ease;
 }
 
@@ -91,7 +121,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  background: #ffffff;
+  background: var(--color-card-bg);
   min-height: calc(90vh + 80px); /* adapts to screen height */
   text-align: left;
 }
@@ -104,14 +134,14 @@ body {
   font-family: 'Viga', sans-serif;
   font-size: 7vw;
   font-weight: 700;
-  color: #1c1c1c;
+  color: var(--color-hero-title);
   line-height: 1.1;
   margin-bottom: 1rem;
 }
 
 .hero p {
   font-size: 1.4rem;
-  color: #4d4d4d;
+  color: var(--color-hero-p);
 }
 
 main.content {
@@ -125,40 +155,40 @@ h2 {
   font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: #111;
+  color: var(--color-h2-text);
 }
 
 section {
   /*margin-bottom: 2rem;*/
   padding: 2rem;
-  /*border: 1px solid #e0e0e0;*/
+  /*border: 1px solid var(--color-border);*/
   border-radius: 8px;
 }
 
 hr {
   border: none;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--color-nav-prof);
   margin: 2rem 0;
 }
 
 a {
-  color: #1a4e58;
+  color: var(--color-accent);
   text-decoration: none;
-  border-bottom: 1px solid #1a4e58;
+  border-bottom: 1px solid var(--color-accent);
   transition: color 0.2s ease, border-bottom 0.2s ease;
 }
 
 a:hover {
-  border-bottom: 2px solid #1a4e58;
+  border-bottom: 2px solid var(--color-accent);
 }
 
 footer {
   padding: 2rem;
   text-align: center;
   font-size: 0.9rem;
-  color: #888;
-  background-color: #fefefe;
-  border-top: 1px solid #eaeaea;
+  color: var(--color-muted);
+  background-color: var(--color-footer-bg);
+  border-top: 1px solid var(--color-footer-border);
 }
 
 @media (max-width: 600px) {
@@ -236,16 +266,16 @@ footer {
 }
 
 .section-box {
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--color-border);
   border-radius: 10px;
   overflow: hidden;
-  background-color: #ffffff;
+  background-color: var(--color-card-bg);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
 }
 
 .section-box section {
   padding: 2rem;
-  /*border-bottom: 1px solid #e0e0e0;*/
+  /*border-bottom: 1px solid var(--color-border);*/
 }
 
 .section-box section:last-child {
@@ -266,10 +296,10 @@ footer {
 /* Individual publication entry */
 .pub-entry, .bib-entry {
     /* margin-bottom: 1.5rem; */
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid var(--color-border);
     /* padding-bottom: 1rem; */
     padding: 1em;
-    background-color: #f9f9f9;
+    background-color: var(--color-pub-bg);
     /*border-radius: 8px;*/
 }
 
@@ -281,7 +311,7 @@ footer {
 .pub-title, .bib-title {
     font-size: 1.1em;
     font-weight: 600;
-    color: #2c3e50;
+    color: var(--color-pub-text);
     margin-bottom: 0.3em;
     line-height: 1.4;
     font-family: 'Nunito Sans', sans-serif;
@@ -290,7 +320,7 @@ footer {
 /* Authors */
 .pub-authors, .bib-authors {
     font-size: 0.95rem;
-    color: #444;
+    color: var(--color-pub-author);
     font-variant: small-caps;
     margin-bottom: 0.4rem;
     font-weight: 500;
@@ -300,7 +330,7 @@ footer {
 /* Publication details */
 .pub-details, .bib-details {
     font-size: 0.9rem;
-    color: #666;
+    color: var(--color-pub-details);
     font-weight: 300;
     line-height: 1.4;
     font-family: 'Nunito Sans', sans-serif;
@@ -308,21 +338,21 @@ footer {
 
 /* Links in details */
 .bib-details a, .pub-details a {
-    color: #1a4e58;
+    color: var(--color-accent);
     text-decoration: none;
-    border-bottom: 1px solid #1a4e58;
+    border-bottom: 1px solid var(--color-accent);
     transition: color 0.2s ease, border-bottom 0.2s ease;
 }
 
 .bib-details a:hover, .pub-details a:hover {
-    color: #1a4e58;
-    border-bottom: 2px solid #1a4e58;
+    color: var(--color-accent);
+    border-bottom: 2px solid var(--color-accent);
 }
 
 /* Bold text (highlighted author) */
 .pub-entry strong, .bib-entry strong {
     font-weight: 700;
-    color: #2c3e50;
+    color: var(--color-pub-text);
 }
 
 /* --- Social Icons Styling --- */
@@ -343,7 +373,7 @@ footer {
     font-size: 1.5em; /* Keep icon size */
     /* Remove 'margin' here, as space-evenly handles distribution */
     text-decoration: none; /* Remove underline */
-    color: #4d4d4d; /* Default icon color */
+    color: var(--color-hero-p); /* Default icon color */
     transition: color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
     border-bottom: none; /* Ensure no border-bottom */
     /* We don't need display: inline-block here because flex items are block-like by default */
@@ -351,7 +381,7 @@ footer {
 
 /* Hover effect for social icons */
 #contact .social-icons-container a:hover { /* Target using the new class */
-    color: #1a4e58; /* Use your primary link color on hover */
+    color: var(--color-accent); /* Use your primary link color on hover */
     text-decoration: none; /* Ensure no underline appears on hover */
     transform: translateY(-3px); /* Subtle lift effect on hover */
     border-bottom: none; /* Ensure no border-bottom */
@@ -359,13 +389,13 @@ footer {
 
 /* Optional: Brand colors on hover for specific icons */
 /* (Keep these as they were, they'll still work with the new structure) */
-#contact a[aria-label="Twitter Profile"]:hover { color: #1DA1F2; }
-#contact a[aria-label="X Profile"]:hover { color: #101419; }
-#contact a[aria-label="Mastodon Profile"]:hover { color: #6364FF; }
-#contact a[aria-label="Threads Profile"]:hover { color: #000000; }
-#contact a[aria-label="Linkedin Profile"]:hover { color: #0A66C2; }
-#contact a[aria-label="Github Profile"]:hover { color: #6e5494; }
-#contact a[aria-label="Orcid Profile"]:hover { color: #A6CE39; }
+#contact a[aria-label="Twitter Profile"]:hover { color: var(--color-twitter); }
+#contact a[aria-label="X Profile"]:hover { color: var(--color-x-twitter); }
+#contact a[aria-label="Mastodon Profile"]:hover { color: var(--color-mastodon); }
+#contact a[aria-label="Threads Profile"]:hover { color: var(--color-threads); }
+#contact a[aria-label="Linkedin Profile"]:hover { color: var(--color-linkedin); }
+#contact a[aria-label="Github Profile"]:hover { color: var(--color-github); }
+#contact a[aria-label="Orcid Profile"]:hover { color: var(--color-orcid); }
 
 
 /* --- Email Link Styling (aligned to the left) --- */
@@ -381,16 +411,16 @@ footer {
     display: inline;
     font-size: 1em;
     margin: 0;
-    color: #1a4e58;
+    color: var(--color-accent);
     text-decoration: none;
-    border-bottom: 1px solid #1a4e58;
+    border-bottom: 1px solid var(--color-accent);
     transition: border-bottom 0.2s ease, color 0.2s ease;
 }
 
 #contact .email-address a[href^="mailto:"]:hover { /* Target the link within the new email paragraph */
     /* Keep existing email link hover styles */
-    color: #1a4e58;
-    border-bottom: 2px solid #1a4e58;
+    color: var(--color-accent);
+    border-bottom: 2px solid var(--color-accent);
     transform: none;
 }
 
